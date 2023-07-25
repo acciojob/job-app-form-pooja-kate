@@ -1,16 +1,84 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="url"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <form method="post">
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required>
 
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Gender*</label>
+    <input type="radio" name="gender" id="male" value="Male" required>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="Female" required>
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="Other" required>
+    <label for="other">Other</label>
+
+    <label for="laptop">Laptop Brands</label>
+    <select id="laptop" name="laptop">
+      <option value="Apple">Apple</option>
+      <option value="Asus">Asus</option>
+      <option value="HP">HP</option>
+    </select>
+
+    <label for="age">Age*</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="dob">DOB*</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="password">Password*</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="portfolio">Portfolio URL</label>
+    <input type="url" id="portfolio" name="portfolio">
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
-
 </html>
